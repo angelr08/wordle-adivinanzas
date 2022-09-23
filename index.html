@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles.css">
+    <title>Wordle-Adivinanzas</title>
+</head>
+<body>
+    <h1>WORDLE</h1>
+    <h2 class="adivinanzas-titulo">Adivinanzas</h2>
+    <h2 class="instrucciones-titulo">Instrucciones</h2>
+    <section class="instrucciones">
+        <ol>
+            <li>Se presentaran un total de 9 adivinanzas.</li>
+            <li>Utiliza el teclado proporcionado para elegir 
+                las letras adecuadas a tu respuesta.</li>
+            <li>Tienes 5 intentos para completar las 9.</li>
+            <li>Todas las respuestas tienen 5 letras.</li>
+            <li>Después de cada intento el color de la letra 
+                cambia para mostrar que tan cerca estás de 
+                la respuesta. </li>
+        </ol>
+    </section>
+    <section class="ejemplos">
+        <p>Ejemplos:</p>
+        <div class="ejemplos-container">
+            <div class="letra-correcta">A</div>
+            <div>M</div>
+            <div>I</div>
+            <div>N</div>
+            <div>A</div>
+        </div>
+        <p>La letra A está en la palabra y en la posición correcta</p>
+        <div class="ejemplos-container">
+            <div>B</div>
+            <div>O</div>
+            <div class="letra-incorrecta">D</div>
+            <div>A</div>
+            <div>G</div>
+        </div>
+        <p>La letra D está en la palabra, pero en una posición 
+            incorrecta</p>
+        <div class="ejemplos-container">
+            <div>C</div>
+            <div>A</div>
+            <div>C</div>
+            <div>O</div>
+            <div class="letra-ausente">E</div>
+        </div>
+        <p>La letra E no está en la palabra.</p>
+    </section>
+    <div class="play-container">
+        <a href="./src/play.html">Jugar</a>
+    </div>
+<footer>
+    <p>Developed by <a href="https://github.com/angelr08">Angel Ranírez</a></p>
+</footer>
+<script src="./src/index.js"></script>
+</body>
+</html>

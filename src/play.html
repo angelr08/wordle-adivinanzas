@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle-Adivinanzas-Juego</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h2>Nivel <span id="currentLevel">1</span></h2>
+    <p class="trys">Intentos: <span id="attempts">5</span></p>
+    <div class="clue-container">
+        <span id="clue">Voy construyendo mis redes entre ramas y en 
+            rincones para que caigan en ellas las moscas 
+            incautas.</span>
+    </div>
+    <section class="answer-container">
+        <div id="letter-1"></div>
+        <div id="letter-2"></div>
+        <div id="letter-3"></div>
+        <div id="letter-4"></div>
+        <div id="letter-5"></div>
+    </section>
+    <section class="teclado">
+        <ul>
+            <li><button onclick="pressLetter()">Q</button></li>
+            <li><button onclick="pressLetter()">W</button></li>
+            <li><button onclick="pressLetter()">E</button></li>
+            <li><button onclick="pressLetter()">R</button></li>
+            <li><button onclick="pressLetter()">T</button></li>
+            <li><button onclick="pressLetter()">Y</button></li>
+            <li><button onclick="pressLetter()">U</button></li>
+            <li><button onclick="pressLetter()">I</button></li>
+            <li><button onclick="pressLetter()">O</button></li>
+            <li><button onclick="pressLetter()">P</button></li>
+            <li class="a-button"><button onclick="pressLetter()">A</button></li>
+            <li><button onclick="pressLetter()">S</button></li>
+            <li><button onclick="pressLetter()">D</button></li>
+            <li><button onclick="pressLetter()">F</button></li>
+            <li><button onclick="pressLetter()">G</button></li>
+            <li><button onclick="pressLetter()">H</button></li>
+            <li><button onclick="pressLetter()">J</button></li>
+            <li><button onclick="pressLetter()">K</button></li>
+            <li><button onclick="pressLetter()">L</button></li>
+            <li><button onclick="pressLetter()">Ñ</button></li>
+            <li class="enviar-button"><button onclick="conditionWin()">Enviar</button></li>
+            <li><button onclick="pressLetter()">Z</button></li>
+            <li><button onclick="pressLetter()">X</button></li>
+            <li><button onclick="pressLetter()">C</button></li>
+            <li><button onclick="pressLetter()">V</button></li>
+            <li><button onclick="pressLetter()">B</button></li>
+            <li><button onclick="pressLetter()">N</button></li>
+            <li><button onclick="pressLetter()">M</button></li>
+            <li class="borrar-button"><button onclick="deleteLetter()">Borrar</button></li>
+        </ul>  
+    </section>
+    <script src="./index.js"></script>
+</body>
+</html>
