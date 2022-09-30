@@ -31,38 +31,42 @@ const deleteLetter = () => {
 
 const conditionWin = () => {
     event.preventDefault();
-    for (let i = 0; i < myAnswer.length; i++) {
-        if (myAnswer[i] === secretWord[i]) {
-            positions.push('#68B408');
-        } else if (secretWord.includes(myAnswer[i])) {
-            positions.push('#CDB904');
+    if (myAnswer.length === 5) {
+        for (let i = 0; i < myAnswer.length; i++) {
+            if (myAnswer[i] === secretWord[i]) {
+                positions.push('#68B408');
+            } else if (secretWord.includes(myAnswer[i])) {
+                positions.push('#CDB904');
+            } else {
+                positions.push('#BFBABA');
+            }
+        }
+        for (let j = 0; j < 5; j++) {
+            const currentLetter = document.getElementById(`letter-${j + 1}`);
+            currentLetter.style.background = positions[j];
+            currentLetter.style.color = 'white';
+        }
+        if (myAnswer.join('') == secretWord) {
+            alert('Acertaste');
+            level ++;
+            for (let k = 0; k < myAnswer.length; k++) {
+                const currentLetter = document.getElementById(`letter-${k + 1}`);
+                currentLetter.textContent = '';
+                currentLetter.style.background = 'white';
+                currentLetter.style.color = 'black';
+            }
+            myAnswer = [];
         } else {
-            positions.push('#BFBABA');
+            alert('Erraste');
+            attempts -= 1;
+            spanAttempts.textContent = `${attempts}`;
+            lifeNumbers();
         }
-    }
-    for (let j = 0; j < 5; j++) {
-        const currentLetter = document.getElementById(`letter-${j + 1}`);
-        currentLetter.style.background = positions[j];
-        currentLetter.style.color = 'white';
-    }
-    if (myAnswer.join('') == secretWord) {
-        alert('Acertaste');
-        level ++;
-        for (let k = 0; k < myAnswer.length; k++) {
-            const currentLetter = document.getElementById(`letter-${k + 1}`);
-            currentLetter.textContent = '';
-            currentLetter.style.background = 'white';
-            currentLetter.style.color = 'black';
-        }
-        myAnswer = [];
+        positions = [];
+        levelEvaluation();
     } else {
-        alert('Erraste');
-        attempts -= 1;
-        spanAttempts.textContent = `${attempts}`;
-        lifeNumbers();
+        alert('Tu palabra está incompleta');
     }
-    positions = [];
-    levelEvaluation();
 }
 
 const lifeNumbers = () => {
